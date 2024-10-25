@@ -8,6 +8,37 @@ This sample only supports macOS, but adapting it for iOS would be easy.
 
 <img src="Sample.png" width="715">
 
+```swift
+import SwiftUI
+import CustomFormStyle
+
+struct ContentView: View
+{
+    var body: some View {
+        Form {
+            Section("Introduction") {
+                Text("Hello! This form is using a custom `FormStyle` that looks similar to `GroupedFormStyle`, but provides some additional features.")
+            }
+            TextField("Name", text: .constant(""))
+            LabeledContent("Some labeled content") {
+                Text("Some text")
+            }
+            Toggle("This is neat", isOn: .constant(true))
+            GroupBox("Some GroupBox") {
+                TextField("Pet name", text: .constant(""))
+                TextField("Favorite song", text: .constant(""))
+            }
+            Section("Additional Details") {
+                Picker("Country", selection: .constant("Switzerland")) {
+                    Text("Switzerland")
+                }
+            }
+        }
+        .formStyle(CustomFormStyle())
+    }
+}
+```
+
 **Compared to `GroupedFormStyle`:**
 
 - Uses full width for content
