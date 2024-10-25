@@ -6,7 +6,7 @@ This sample creates a basic form style that's similar to the integrated [`Groupe
 
 This sample only supports macOS, but adapting it for iOS would be easy.
 
-![CustomFormStyle sample image](Sample.png)
+![CustomFormStyle sample image](Sample.png){width=715 height=656}
 
 **Compared to `GroupedFormStyle`:**
 
