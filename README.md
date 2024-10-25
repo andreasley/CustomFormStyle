@@ -1,6 +1,6 @@
 # CustomFormStyle
 
-SwiftUI's `Form` can be styled with the modifier `.formStyle()`. macOS 15 brought official support for [SwiftUI container iteration](https://developer.apple.com/videos/play/wwdc2024/10146/), making the construction of a custom [`FormStyle`](https://developer.apple.com/documentation/swiftui/formstyle) finally possible.
+SwiftUI's `Form` can be styled with the modifier `.formStyle()`. macOS 15 brought official support for [SwiftUI container iteration](https://developer.apple.com/videos/play/wwdc2024/10146/), making the construction of a custom [`FormStyle`](https://developer.apple.com/documentation/swiftui/formstyle) finally possible [^1].
 
 This sample creates a basic form style that's similar to the integrated [`GroupedFormStyle`](https://developer.apple.com/documentation/swiftui/groupedformstyle) but more optimized for forms with many fields and more complex controls.
 
@@ -25,4 +25,4 @@ This sample only supports macOS, but adapting it for iOS would be easy.
 Hopefully, macOS 16 or 17 will properly support a custom TextFieldStyle. 
 
 
-If you really, really need a custom FormStyle in macOS 14 
+[^1]: If you need a custom `FormStyle` in macOS 14, you can use `_VariadicView_MultiViewRoot` instead of container iteration. More about that [here](https://movingparts.io/variadic-views-in-swiftui).
